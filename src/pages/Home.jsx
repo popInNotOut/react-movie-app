@@ -2,12 +2,14 @@ import MovieCard from "../components/MovieCard";
 import { useState, useEffect } from "react";
 import { searchMovies, getPopularMovies } from "../services/api";
 import "../css/Home.css";
+import { useLocation } from "react-router-dom";
 
 function Home(){
     const [searchQuery, setSearchQuery] = useState("");
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
+    const location = useLocation();
 
     useEffect(() => {
         const loadPopularMovies = async () => {
@@ -24,8 +26,9 @@ function Home(){
             }
         }
         
+        setSearchQuery("");
         loadPopularMovies();
-    }, []);
+    }, [location.key]);
 
     const handleSearch = async (e) => {
         e.preventDefault();
