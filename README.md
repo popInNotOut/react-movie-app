@@ -1,16 +1,26 @@
-# React + Vite
+## Description
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a react movie list app built mainly by following a YouTube tutorial. I decided to add some quality of life improvements and changes at the end.
 
-Currently, two official plugins are available:
+<table border="1" cellspacing="0" cellpadding="5">
+  <tr>
+    <th>Website</th>
+    <th>Link</th>
+  </tr>
+  <tr>
+    <td>GitHub demo</td>
+    <td><a href="https://popinnotout.github.io/react-movie-app/">github link</a></td>
+  </tr>
+</table>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+<br><br>
 
-## React Compiler
+## Usage
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This app displays popular movies in the homepage. You can favorite movies of your choice by clicking on the heart popup on the top right of a movie card when you hover over it; the color of the heart will change from white to red. To unfavorite a movie, you need to click on the heart icon again. The favorites page displays your currently favorited movies.
 
-## Expanding the ESLint configuration
+<br>
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Notes
+
+Search results that contain only whitespace will not be processed
